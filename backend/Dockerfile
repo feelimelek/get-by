@@ -7,7 +7,7 @@ WORKDIR /app/backend
 COPY requirements.txt ./
 
 # Build psycopg2-binary from source -- add required required dependencies
-RUN pip install -r requirements.txt
+RUN pip install --no-cache -r requirements.txt
 
 COPY . /app/backend/
 
