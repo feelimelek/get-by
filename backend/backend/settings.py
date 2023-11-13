@@ -57,6 +57,9 @@ CORS_ALLOW_ALL_ORIGINS=True
 
 # The above code allows all the sites to access the data from our server but in 
 # production we will more likely use the CORS_ALLOWED_ORIGINS variable to set up a list of allowed origins.
+ALLOWED_HOSTS = [
+    "localhost",
+]
 
 ROOT_URLCONF = 'backend.urls'
 
