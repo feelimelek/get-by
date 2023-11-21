@@ -1,9 +1,10 @@
-FROM node:latest
-WORKDIR /app/frontend/
+FROM node:21-alpine
 
-COPY package*.json /app/frontend/
+WORKDIR /get-by/frontend/
+
+COPY package*.json /get-by/frontend/
 RUN npm install
 
-COPY . /app/frontend/
+COPY . /get-by/frontend/
 
 CMD ["npm", "start"]

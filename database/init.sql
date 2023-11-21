@@ -1,5 +1,5 @@
 -- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2023-11-13 18:07:45.756
+-- Last modification date: 2023-11-17 18:50:59.707
 
 -- tables
 -- Table: Address
@@ -40,11 +40,12 @@ CREATE TABLE "Emotion_Tip" (
 CREATE TABLE "Person" (
     "id" int  NOT NULL,
     "first_name" Varchar  NOT NULL,
+    "last_name" int  NOT NULL,
     "email" Varchar  NOT NULL,
     "points" int  NOT NULL,
     "password" Varchar  NOT NULL,
-    "professional_id" int  NULL,
     "specializationField" Varchar  NULL,
+    "professional_id" int  NULL,
     "phoneNumber" int  NULL,
     "isAdmin" boolean  NULL,
     CONSTRAINT "Person_pk" PRIMARY KEY ("id")
@@ -155,8 +156,8 @@ ALTER TABLE "Selects" ADD CONSTRAINT "Person_association_1"
 
 -- Reference: Table_10_Tip (table: Tip)
 ALTER TABLE "Tip" ADD CONSTRAINT "Table_10_Tip"
-    FOREIGN KEY ("state", "cep")
-    REFERENCES "Address" ("state", "cep")  
+    FOREIGN KEY ("cep", "state")
+    REFERENCES "Address" ("cep", "state")  
     NOT DEFERRABLE 
     INITIALLY IMMEDIATE
 ;
@@ -232,4 +233,3 @@ CREATE SEQUENCE "Tip_seq"
 ;
 
 -- End of file.
-
