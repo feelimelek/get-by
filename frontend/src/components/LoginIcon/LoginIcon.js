@@ -29,6 +29,8 @@ export default LoginIcon;
 const styles = StyleSheet.create({
   iconButton: {
     backgroundColor: "#ffffff",
+    height: '18%',
+    width: '9%',
     cursor: 'pointer'
   },
 })
