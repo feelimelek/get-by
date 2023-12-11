@@ -1,0 +1,8 @@
+.icon {
+    position: relative;
+    height: 30%;
+    width: 15%;
+    color: black;
+    align-self: flex-end;
+    padding: 6%;
+}
